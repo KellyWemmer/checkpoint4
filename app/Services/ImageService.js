@@ -1,14 +1,14 @@
 import { ProxyState } from "../AppState.js";
-import {BgImage} from "../Models/Image.js";
+import {BgImage} from "../Models/BgImage.js";
 import { ImageController } from "../Controllers/ImageController.js";
 import { api } from "./AxiosService.js";
 
 class ImageService {
     async getImage() {
         let res = await api.get('/images')
-        console.log('get image response service', res)//successful
+        console.log('get image response service', res.data)//successful
 
-        ProxyState.image = res.data.results
+        ProxyState.image = new BgImage(res.data)
     }
 }
 

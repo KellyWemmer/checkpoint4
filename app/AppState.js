@@ -5,7 +5,7 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = []
 
-  /** @type {import('./Models/Image').Image} */ //singular for one image
+  /** @type {import('./Models/BgImage').Image} */ //singular for one image
   image = {}
 
 }
