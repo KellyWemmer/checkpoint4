@@ -10,8 +10,7 @@ function _drawTodos() {
     console.log('drawing tasks', template)
 
     document.getElementById('todo-form').innerHTML = getTodoForm()//This is first to fill form
-    document.getElementById('created-task').innerHTML = template
-    
+    document.getElementById('created-task').innerHTML = template    
 }
 
 export class TodosController {
@@ -36,8 +35,7 @@ export class TodosController {
             form.reset()
         } catch (error) {
             console.log('[creating task]', error)
-            Pop.error(error)       
-            
+            Pop.error(error)           
         }
     }
 
@@ -46,10 +44,31 @@ export class TodosController {
             await todosService.getTodos()
         } catch (error) {
           Pop.error(error)  
-          console.log('[getTasks]', error)
-            
-        }
-        
+          console.log('[getTasks]', error)            
+        }        
     }
+
+    async toggleTodo(todoId) {
+        try {
+            await todosService.toggleTodo(todoId)
+        } catch (error) {
+            console.log('[toggle todo]', error)
+            Pop.error(error)
+        }
+    }
+
+    async deleteTask(id) {
+        try {
+            const yes = await Pop.confirm('Delete Task?')
+            if (!yes) {return} //Stops function??
+
+            await todosService.deleteTask(id)
+        } catch (error) {
+            console.error('[Deleting Spell]', error)
+            Pop.error(error)
+        }
+    }
+
+
     
 }
