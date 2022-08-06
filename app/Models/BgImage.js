@@ -4,12 +4,7 @@ export class BgImage {
         //dynamically write css here if needed
     }
 
-    // get BgImageTemplate(){
-    //     return `
-    //     `
-    // }
-
-    get imageString() {
+       get imageString() {
         return this.img
     }
 }
