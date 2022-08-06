@@ -8,6 +8,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/BgImage').Image} */ //singular for one image
   image = {}
 
+  /** @type {import('./Models/Todo').Todo[]} */
+  todos = []
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {

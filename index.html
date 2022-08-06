@@ -12,7 +12,23 @@
   <link rel="stylesheet" href="assets/style/style.css">
   <title>checkpoint4</title>
 </head>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
 
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
 <body>
   
   <main>
@@ -23,21 +39,33 @@
             <!-- background image -->
             <!-- <img src="" alt=""> -->
           </div>
+          <div class="col-12 d-flex">
+            <h1>WEATHER</h1>            
+          </div>
         </div>
       </div>
       <div class="row">
+        <div class="col-12 d-flex" id="clock">
+          <h1 class="">CLOCK</h1>
+        </div>
 
       </div>
-      <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4"></div>
-        <div class="col-4" id="todo-form">
-          <!-- ToDo List here -->
-          <form action="">
-            <input name="name" id="name" required type="text">
-            <button>add</button>
-
-          </form>
+      <div class="row">        
+        <div class="col-6 d-flex" id="quote">
+          <h1>QUOTE</h1>
+        </div>
+        <div class="card rounded col-6" style="width: 18rem" >
+          <div class="card-body m-3" id="todo-form">            
+            <!-- ToDo Form here -->
+            <!-- <form action="">
+              <h5>Count: 3/4</h5>
+              <div id="created-task">
+                <p>Todo task</p>
+              </div>                
+              <input name="name" id="name" required type="text">
+              <button class="btn bg-secondary m-1">add</button>
+            </form> -->
+          </div>          
         </div>
       </div>
     </div>
