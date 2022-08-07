@@ -7,7 +7,7 @@ export class Time {
 
     get timeTemplate() {
         return `
-        <h1 class="">${this.time}</h1>        `
+        <h1 class="bg-light rounded display-1 text-center">${this.time}</h1>`
         
     }
 

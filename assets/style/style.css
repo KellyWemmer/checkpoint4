@@ -1,4 +1,25 @@
 /* BASIC STYLES HERE */
-.clock {
-    height: 75%;
+/* .row1height {
+    height: 25vh;
+} */
+
+.row2height {
+    height: 45vh;
 }
+
+/* .row3height {
+    height: 25vh;
+} */
+
+/* .row4height {
+    height: 5vh;
+} */
+
+.author {
+    display: none;
+}
+
+.quote:hover + .author {
+    display:block;
+}
+

@@ -8,8 +8,8 @@ export class Todo {
 
     get TodoTemplate() {
         return `
-        <div class="p-2">
-            <input class="m-2 mb-3" type="checkbox" ${this.completed ? 'checked' : ''} onchange="app.todosController.toggleTodo('${this.id}')"></input>
+        <div class="p-3">
+            <input class="mb-3" type="checkbox" ${this.completed ? 'checked' : ''} onchange="app.todosController.toggleTodo('${this.id}')"></input>
             <span>${this.description}</span>
             <button class="btn selectable" onclick="app.todosController.deleteTask('${this.id}')">
                 <i class="mdi mdi-delete-forever"></i>
