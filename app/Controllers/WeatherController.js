@@ -20,4 +20,9 @@ export class WeatherController {
             Pop.error(error)
         }
     }
+
+    toggleTemp() {
+        weatherService.toggleTemp() 
+    }
+        
 }

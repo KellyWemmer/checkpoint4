@@ -12,6 +12,11 @@ class WeatherService {
 
     }
 
+    toggleTemp() {
+        ProxyState.weather.isCelsius = !ProxyState.weather.isCelsius
+        ProxyState.weather = ProxyState.weather
+    }
+
     
    
 
