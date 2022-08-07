@@ -4,7 +4,6 @@ import { Pop } from "../Utils/Pop.js";
 import { Time } from "../Models/Time.js";
 
 function _drawTime() {
-    console.log( Time.timeTemplate)//logged undefined
     document.getElementById('clock').innerHTML = ProxyState.time.timeTemplate
 }
 
