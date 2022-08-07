@@ -10,6 +10,8 @@ class TimeService {
        
         ProxyState.time = new Time(time)
     }
+
+    
 }
 
 export const timeService = new TimeService()

@@ -11,7 +11,7 @@ function _drawTime() {
 export class TimeController {
     constructor() {
         ProxyState.on('time', _drawTime)
-        this.getTime()
+        setInterval(this.getTime, 1000)
     }
 
     getTime() {
