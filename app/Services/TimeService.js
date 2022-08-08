@@ -6,7 +6,7 @@ class TimeService {
     getTime() {
         let today = new Date();
 
-        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let time = today.getHours() + ":" + today.getMinutes();
        
         ProxyState.time = new Time(time)
     }
